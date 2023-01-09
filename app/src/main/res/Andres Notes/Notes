@@ -1,0 +1,28 @@
+How do I save my project to github?
+
+To save your project to GitHub, you will need to create a repository for your project and then push your local code to the repository. Here is a summary of the steps you need to follow:
+
+Go to GitHub and sign in to your account.
+Click the "+" icon in the top right corner, and select "New repository".
+Give your repository a name and a brief description, and select "Create repository".
+Open a terminal window, navigate to the root directory of your project, and run the following commands:
+
+[ cd C:\Users\andre\AndroidStudioProjects\MADSkills ]
+
+Copy code
+git init
+[Initialized empty Git repository in C:/Users/andre/AndroidStudioProjects/MADSkills/.git/]
+git add .
+git commit -m "Initial commit"
+These commands will initialize a Git repository in your project, add all the files in your project to the repository, and create an initial commit.
+
+Next, you need to add the GitHub repository as a remote for your local repository. To do this, run the following command, replacing <username> with your GitHub username and <repository> with the name of your repository:
+Copy code
+git remote add origin https://github.com/<username>/<repository>.git
+Finally, push your local repository to the GitHub repository by running the following command:
+Copy code
+git push -u origin master
+This will push your code to the master branch of the repository on GitHub. If you want to push to a different branch, you can specify the name of the branch after origin, like this:
+
+Copy code
+git push -u origin <branch-name>
